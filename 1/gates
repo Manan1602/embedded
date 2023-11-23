@@ -1,0 +1,95 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+S_0000017e7dc9cd80 .scope module, "main" "main" 2 1;
+ .timescale 0 0;
+v0000017e7db19090_0 .var "x", 0 0;
+v0000017e7db19130_0 .var "y", 0 0;
+v0000017e7db22f70_0 .net "z1", 0 0, L_0000017e7db1b8c0;  1 drivers
+v0000017e7db22cf0_0 .net "z2", 0 0, L_0000017e7db1b850;  1 drivers
+v0000017e7db235b0_0 .net "z3", 0 0, L_0000017e7db1ba80;  1 drivers
+v0000017e7db23c90_0 .net "z4", 0 0, L_0000017e7db1bd90;  1 drivers
+v0000017e7db23470_0 .net "z5", 0 0, L_0000017e7db1baf0;  1 drivers
+v0000017e7db22750_0 .net "z6", 0 0, L_0000017e7db1be00;  1 drivers
+v0000017e7db23290_0 .net "z7", 0 0, L_0000017e7db1bd20;  1 drivers
+v0000017e7db231f0_0 .net "z8", 0 0, L_0000017e7db1b930;  1 drivers
+S_0000017e7dc9cf10 .scope module, "g" "gates" 2 6, 3 1 0, S_0000017e7dc9cd80;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x";
+    .port_info 1 /INPUT 1 "y";
+    .port_info 2 /OUTPUT 1 "andc";
+    .port_info 3 /OUTPUT 1 "orc";
+    .port_info 4 /OUTPUT 1 "nandc";
+    .port_info 5 /OUTPUT 1 "norc";
+    .port_info 6 /OUTPUT 1 "notcx";
+    .port_info 7 /OUTPUT 1 "notcy";
+    .port_info 8 /OUTPUT 1 "xorc";
+    .port_info 9 /OUTPUT 1 "xnorc";
+L_0000017e7db1b8c0 .functor AND 1, v0000017e7db19090_0, v0000017e7db19130_0, C4<1>, C4<1>;
+L_0000017e7db1bbd0 .functor NOT 1, v0000017e7db19130_0, C4<0>, C4<0>, C4<0>;
+L_0000017e7db1bc40 .functor AND 1, v0000017e7db19090_0, L_0000017e7db1bbd0, C4<1>, C4<1>;
+L_0000017e7db1bb60 .functor NOT 1, v0000017e7db19090_0, C4<0>, C4<0>, C4<0>;
+L_0000017e7db1b700 .functor AND 1, L_0000017e7db1bb60, v0000017e7db19130_0, C4<1>, C4<1>;
+L_0000017e7db1bcb0 .functor OR 1, L_0000017e7db1bc40, L_0000017e7db1b700, C4<0>, C4<0>;
+L_0000017e7db1b7e0 .functor AND 1, v0000017e7db19090_0, v0000017e7db19130_0, C4<1>, C4<1>;
+L_0000017e7db1b850 .functor OR 1, L_0000017e7db1bcb0, L_0000017e7db1b7e0, C4<0>, C4<0>;
+L_0000017e7db1ba10 .functor AND 1, v0000017e7db19090_0, v0000017e7db19130_0, C4<1>, C4<1>;
+L_0000017e7db1ba80 .functor NOT 1, L_0000017e7db1ba10, C4<0>, C4<0>, C4<0>;
+L_0000017e7db1bd90 .functor NOT 1, L_0000017e7db1b850, C4<0>, C4<0>, C4<0>;
+L_0000017e7db1baf0 .functor NOT 1, v0000017e7db19090_0, C4<0>, C4<0>, C4<0>;
+L_0000017e7db1be00 .functor NOT 1, v0000017e7db19130_0, C4<0>, C4<0>, C4<0>;
+L_0000017e7db1bd20 .functor AND 1, L_0000017e7db1ba80, L_0000017e7db1b850, C4<1>, C4<1>;
+L_0000017e7db1b930 .functor OR 1, L_0000017e7db1bd90, L_0000017e7db1b8c0, C4<0>, C4<0>;
+v0000017e7db193b0_0 .net *"_ivl_10", 0 0, L_0000017e7db1bcb0;  1 drivers
+v0000017e7db19450_0 .net *"_ivl_12", 0 0, L_0000017e7db1b7e0;  1 drivers
+v0000017e7db18d70_0 .net *"_ivl_16", 0 0, L_0000017e7db1ba10;  1 drivers
+v0000017e7db18eb0_0 .net *"_ivl_2", 0 0, L_0000017e7db1bbd0;  1 drivers
+v0000017e7db196d0_0 .net *"_ivl_4", 0 0, L_0000017e7db1bc40;  1 drivers
+v0000017e7db19a90_0 .net *"_ivl_6", 0 0, L_0000017e7db1bb60;  1 drivers
+v0000017e7db19810_0 .net *"_ivl_8", 0 0, L_0000017e7db1b700;  1 drivers
+v0000017e7db18e10_0 .net "andc", 0 0, L_0000017e7db1b8c0;  alias, 1 drivers
+v0000017e7db19590_0 .net "nandc", 0 0, L_0000017e7db1ba80;  alias, 1 drivers
+v0000017e7db19950_0 .net "norc", 0 0, L_0000017e7db1bd90;  alias, 1 drivers
+v0000017e7db19270_0 .net "notcx", 0 0, L_0000017e7db1baf0;  alias, 1 drivers
+v0000017e7db19770_0 .net "notcy", 0 0, L_0000017e7db1be00;  alias, 1 drivers
+v0000017e7db19310_0 .net "orc", 0 0, L_0000017e7db1b850;  alias, 1 drivers
+v0000017e7db18f50_0 .net "x", 0 0, v0000017e7db19090_0;  1 drivers
+v0000017e7db18ff0_0 .net "xnorc", 0 0, L_0000017e7db1b930;  alias, 1 drivers
+v0000017e7db198b0_0 .net "xorc", 0 0, L_0000017e7db1bd20;  alias, 1 drivers
+v0000017e7db199f0_0 .net "y", 0 0, v0000017e7db19130_0;  1 drivers
+    .scope S_0000017e7dc9cd80;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "manan.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000017e7dc9cd80 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000017e7db19090_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000017e7db19130_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000017e7db19130_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000017e7db19090_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000017e7db19130_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0000017e7dc9cd80;
+T_1 ;
+    %vpi_call 2 20 "$monitor", "x= %d, y= %d, and= %d, or = %d, nand = %d, nor = %d, notx = %d, noty = %d, xor = %d, xnor = %d\012", v0000017e7db19090_0, v0000017e7db19130_0, v0000017e7db22f70_0, v0000017e7db22cf0_0, v0000017e7db235b0_0, v0000017e7db23c90_0, v0000017e7db23470_0, v0000017e7db22750_0, v0000017e7db23290_0, v0000017e7db231f0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "main_gates.v";
+    "gates.v";

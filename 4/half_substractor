@@ -1,0 +1,57 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+S_00000218e4c79250 .scope module, "main" "main" 2 1;
+ .timescale 0 0;
+v00000218e4c92ca0_0 .net "c", 0 0, L_00000218e4c7bfa0;  1 drivers
+v00000218e4c92d40_0 .net "s", 0 0, L_00000218e4c7ebf0;  1 drivers
+v00000218e4c92de0_0 .var "x", 0 0;
+v00000218e4c92e80_0 .var "y", 0 0;
+S_00000218e4c793e0 .scope module, "hs" "half_substractor" 2 6, 3 1 0, S_00000218e4c79250;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x";
+    .port_info 1 /INPUT 1 "y";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "c";
+L_00000218e4c7ebf0 .functor XOR 1, v00000218e4c92de0_0, v00000218e4c92e80_0, C4<0>, C4<0>;
+L_00000218e4c933e0 .functor NOT 1, v00000218e4c92de0_0, C4<0>, C4<0>, C4<0>;
+L_00000218e4c7bfa0 .functor AND 1, L_00000218e4c933e0, v00000218e4c92e80_0, C4<1>, C4<1>;
+v00000218e4c936c0_0 .net *"_ivl_2", 0 0, L_00000218e4c933e0;  1 drivers
+v00000218e4c93540_0 .net "c", 0 0, L_00000218e4c7bfa0;  alias, 1 drivers
+v00000218e4c7eb50_0 .net "s", 0 0, L_00000218e4c7ebf0;  alias, 1 drivers
+v00000218e4c79570_0 .net "x", 0 0, v00000218e4c92de0_0;  1 drivers
+v00000218e4c79610_0 .net "y", 0 0, v00000218e4c92e80_0;  1 drivers
+    .scope S_00000218e4c79250;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000218e4c92de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000218e4c92e80_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000218e4c92e80_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000218e4c92de0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000218e4c92e80_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_00000218e4c79250;
+T_1 ;
+    %vpi_call 2 19 "$monitor", "x = %d, y = %d, sub = %d, carry = %d", v00000218e4c92de0_0, v00000218e4c92e80_0, v00000218e4c92d40_0, v00000218e4c92ca0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "main_half_substractor.v";
+    "half_substractor.v";

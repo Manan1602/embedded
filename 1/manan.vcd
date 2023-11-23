@@ -1,0 +1,70 @@
+$date
+	Tue Nov 07 22:23:59 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module main $end
+$var wire 1 ! z8 $end
+$var wire 1 " z7 $end
+$var wire 1 # z6 $end
+$var wire 1 $ z5 $end
+$var wire 1 % z4 $end
+$var wire 1 & z3 $end
+$var wire 1 ' z2 $end
+$var wire 1 ( z1 $end
+$var reg 1 ) x $end
+$var reg 1 * y $end
+$scope module g $end
+$var wire 1 ( andc $end
+$var wire 1 & nandc $end
+$var wire 1 % norc $end
+$var wire 1 $ notcx $end
+$var wire 1 # notcy $end
+$var wire 1 ' orc $end
+$var wire 1 ) x $end
+$var wire 1 ! xnorc $end
+$var wire 1 " xorc $end
+$var wire 1 * y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+0)
+0(
+0'
+1&
+1%
+1$
+1#
+0"
+1!
+$end
+#5
+0!
+0%
+1"
+1'
+0#
+1*
+#10
+0"
+1!
+0&
+1(
+0$
+1)
+#15
+1"
+0%
+0!
+1'
+1&
+0(
+1#
+0*
